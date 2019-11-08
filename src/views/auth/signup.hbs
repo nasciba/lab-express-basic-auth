@@ -1,15 +1,26 @@
-<form id="form" action="/signup" method="POST">
-    <label for="username">Username</label><br>
-    <input type="text" name="username"
-      placeholder="Your username">
+<body class="grey-bg">
 
-    <label for="password">Password</label><br>
-    <input type="password" name="password"
-      placeholder="*******">
 
-    <button type="submit">Create account</button>
+  <form id="form" action="/signup" method="POST">
+    <h5>Signup</h5>
+
+    <label for="username">Usuário</label>
+
+
+    <input type="text" name="username" placeholder="Your username">
+
+    <label for="password">Senha</label>
+
+    <input type="password" name="password" placeholder="*******">
+
+    <button type="submit" class="btn btn-outline-dark">Create account</button>
+
+
+    <p>Já tem uma conta? <a href="/login">Login</a></p>
+    {{#if errorMessage}}
+      {{errorMessage}}
+    {{/if}}
   </form>
 
-  {{#if errorMessage}}
-    <h5>{{errorMessage}}</h5>
-  {{/if}}
+
+</body>

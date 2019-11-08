@@ -1,0 +1,25 @@
+<body class="grey-bg">
+
+    <form action="/login" method="POST" id="form">
+        <h5>Login</h5>
+
+        <label for="username">Usuário</label>
+
+        <input type="text" name="username">
+
+        <label for="password">Senha</label>
+
+        <input type="password" name="password">
+        <div class="error-message">
+            {{#if errorMessage }}
+            <div class="error-message">{{ errorMessage }}</div>
+            {{/if}}
+        </div>
+        <button class="btn btn-outline-dark btn-align">Iniciar sessão</button>
+
+        <p>
+            Não é cadastrado? <a href="/signup">Crie uma conta</a>
+        </p>
+    </form>
+
+</body>
